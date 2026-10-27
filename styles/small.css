@@ -118,10 +118,14 @@ header {
 }
 
 .nav-list a:hover,
-.nav-list a:focus-visible,
-.nav-list a.active {
+.nav-list a:focus-visible {
   background: rgba(244, 185, 66, 0.18);
   color: #f4b942;
+}
+
+.nav-list a.active {
+  background: #f4b942;
+  color: #123244;
 }
 
 main {
@@ -210,7 +214,7 @@ section h2 {
 
 .filter-btn.active {
   background: #1b3a4b;
-  border-color: #1b3a4b;
+  border-color: #f4b942;
   color: #fff;
 }
 
