@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,26 +9,31 @@
       content="Course home page for WDD 231 showing projects, skills, and certificate information."
     />
     <meta name="author" content="Whitney Carleen Snyder" />
-    <title>WDD 231 | Home</title>
+    <title>WDD 231 | Home | Whitney Carleen Snyder</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/small.css" />
     <link rel="stylesheet" href="css/large.css" />
+
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/courses.js" defer></script>
   </head>
+
   <body>
     <header>
       <div class="header-wrap">
         <div class="brand" aria-label="Site logo and brand name">
           <img src="images/logo.svg" alt="Site logo" class="logo" />
-          <span class="site-name">Your Name</span>
+          <span class="site-name">Whitney Carleen Snyder</span>
         </div>
 
         <button
@@ -46,8 +52,16 @@
       <nav class="site-nav" aria-label="Main navigation">
         <ul id="primary-nav" class="nav-list">
           <li><a href="#" class="active">Home</a></li>
-          <li><a href="https://www.byui.edu/" target="_blank" rel="noreferrer">Chamber</a></li>
-          <li><a href="https://www.byui.edu/" target="_blank" rel="noreferrer">Final</a></li>
+          <li>
+            <a href="https://www.byui.edu/" target="_blank" rel="noreferrer">
+              Chamber
+            </a>
+          </li>
+          <li>
+            <a href="https://www.byui.edu/" target="_blank" rel="noreferrer">
+              Final
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -57,20 +71,25 @@
 
       <section aria-labelledby="about-heading">
         <h2 id="about-heading">About Me</h2>
+
         <div class="section-content intro-grid">
           <div class="intro-copy">
             <p>
-              I am a student in the Web and Computer Programming certificate program, and I am
-              building practical front-end skills through responsive design, semantic HTML, CSS,
-              and JavaScript.
+              I am a student in the Web and Computer Programming certificate
+              program, and I am building practical front-end skills through
+              responsive design, semantic HTML, CSS, and JavaScript.
             </p>
+
             <p>
-              This course page demonstrates a clean, accessible, and mobile-friendly home page while
-              applying strong design principles and modern web standards.
+              This course page demonstrates a clean, accessible, and
+              mobile-friendly home page while applying strong design
+              principles and modern web standards.
             </p>
           </div>
+
           <div class="info-card accent-card">
             <h3>Learning Focus</h3>
+
             <ul>
               <li>Responsive web design</li>
               <li>Accessibility and usability</li>
@@ -83,37 +102,71 @@
 
       <section aria-labelledby="courses-heading">
         <h2 id="courses-heading">Course Information</h2>
+
         <div class="course-controls" aria-label="Course filters">
-          <button type="button" class="filter-btn active" data-filter="all">All Courses</button>
-          <button type="button" class="filter-btn" data-filter="WDD">WDD Courses</button>
-          <button type="button" class="filter-btn" data-filter="CSE">CSE Courses</button>
+          <button
+            type="button"
+            class="filter-btn active"
+            data-filter="all"
+          >
+            All Courses
+          </button>
+
+          <button
+            type="button"
+            class="filter-btn"
+            data-filter="WDD"
+          >
+            WDD Courses
+          </button>
+
+          <button
+            type="button"
+            class="filter-btn"
+            data-filter="CSE"
+          >
+            CSE Courses
+          </button>
         </div>
-        <div id="course-list" class="course-list" aria-live="polite"></div>
-        <p id="total-credits" class="total-credits" aria-live="polite"></p>
+
+        <div
+          id="course-list"
+          class="course-list"
+          aria-live="polite"
+        ></div>
+
+        <p
+          id="total-credits"
+          class="total-credits"
+          aria-live="polite"
+        ></p>
       </section>
 
       <section aria-labelledby="work-heading">
         <h2 id="work-heading">Project Highlights</h2>
+
         <div class="card-grid">
           <article class="mini-card">
             <h3>Responsive Design</h3>
             <p>
-              I focus on layout patterns that adjust naturally across mobile, tablet, and desktop
-              devices.
+              I focus on layout patterns that adjust naturally across mobile,
+              tablet, and desktop devices.
             </p>
           </article>
+
           <article class="mini-card">
             <h3>Accessibility</h3>
             <p>
-              Semantic structure, clear contrast, and meaningful text ensure a more inclusive user
-              experience.
+              Semantic structure, clear contrast, and meaningful text ensure
+              a more inclusive user experience.
             </p>
           </article>
+
           <article class="mini-card">
             <h3>JavaScript</h3>
             <p>
-              I use scripting to create interactive interfaces, dynamic content, and user-driven
-              filtering.
+              I use scripting to create interactive interfaces, dynamic
+              content, and user-driven filtering.
             </p>
           </article>
         </div>
@@ -121,25 +174,49 @@
     </main>
 
     <footer>
-      <div class="footer-item social-links" aria-label="Social media links">
-        <a href="https://github.com/ws8637282-art" target="_blank" rel="noreferrer" aria-label="GitHub">
+      <div
+        class="footer-item social-links"
+        aria-label="Social media links"
+      >
+        <a
+          href="https://github.com/ws8637282-art"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub"
+        >
           GitHub
         </a>
-        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+
+        <a
+          href="https://www.linkedin.com"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="LinkedIn"
+        >
           LinkedIn
         </a>
-        <a href="https://www.facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Facebook"
+        >
           Facebook
         </a>
       </div>
 
       <div class="footer-item footer-meta">
-        <p>&copy; <span id="currentYear"></span> Whitney Carleen Snyder</p>
-        <p>United States</p>
+        <p>
+          &copy; <span id="currentYear"></span>
+          Whitney Carleen Snyder
+        </p>
+
+        <p>Samoa</p>
       </div>
 
       <div class="footer-item">
-        <p id="lastModified">Last modified: </p>
+        <p id="lastModified">Last modified:</p>
       </div>
     </footer>
   </body>
