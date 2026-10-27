@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Course site logo</title>
+  <desc id="desc">A simple abstract geometric mark with layered shapes.</desc>
+  <rect width="120" height="120" rx="18" fill="#1b3a4b"/>
+  <path d="M30 88L60 22l30 66H30z" fill="#f4b942" opacity="0.9"/>
+  <path d="M52 88L60 70l8 18h-16z" fill="#ffffff" opacity="0.9"/>
+  <circle cx="60" cy="48" r="10" fill="#1b3a4b"/>
+</svg>
