@@ -1,0 +1,72 @@
+[
+  {
+    "company": "Sunrise Valley Market",
+    "address": "214 Orchard Lane, Plainside Valley, WA 98001",
+    "phone": "(206) 555-0141",
+    "website": "https://www.sunrisevalleymarket.com",
+    "image": "sunrise-market.svg",
+    "membershipLevel": 3,
+    "category": "Retail & Grocery",
+    "description": "Locally owned grocer offering fresh produce, artisan foods, and neighborhood essentials."
+  },
+  {
+    "company": "Green Grove Studio",
+    "address": "88 Willow Way, Plainside Valley, WA 98002",
+    "phone": "(206) 555-0142",
+    "website": "https://www.greengrovestudio.com",
+    "image": "green-grove.svg",
+    "membershipLevel": 2,
+    "category": "Arts & Design",
+    "description": "A creative studio that offers floral design, event styling, and handcrafted décor."
+  },
+  {
+    "company": "Brindle Brew Co.",
+    "address": "56 Cedar Street, Plainside Valley, WA 98003",
+    "phone": "(206) 555-0143",
+    "website": "https://www.brindlebrewco.com",
+    "image": "brindle-brew.svg",
+    "membershipLevel": 1,
+    "category": "Hospitality",
+    "description": "Neighborhood coffee bar and bakery serving handcrafted drinks, pastries, and community gatherings."
+  },
+  {
+    "company": "Summit Supply Co.",
+    "address": "315 Mountain View Drive, Plainside Valley, WA 98004",
+    "phone": "(206) 555-0144",
+    "website": "https://www.summitsupplyco.com",
+    "image": "summit-supply.svg",
+    "membershipLevel": 3,
+    "category": "Home Improvement",
+    "description": "Full-service hardware and repair shop helping homeowners and builders with supplies and expertise."
+  },
+  {
+    "company": "Lakeside Lab",
+    "address": "19 Bayfront Road, Plainside Valley, WA 98005",
+    "phone": "(206) 555-0145",
+    "website": "https://www.lakesidelab.com",
+    "image": "lakeside-lab.svg",
+    "membershipLevel": 2,
+    "category": "Professional Services",
+    "description": "An innovation and research firm offering product testing, environmental analysis, and consulting."
+  },
+  {
+    "company": "Harbor Home Interiors",
+    "address": "780 Marina Terrace, Plainside Valley, WA 98006",
+    "phone": "(206) 555-0146",
+    "website": "https://www.harborhomeinteriors.com",
+    "image": "harbor-home.svg",
+    "membershipLevel": 1,
+    "category": "Retail & Home Goods",
+    "description": "Boutique furniture and décor shop specializing in comfortable, functional living spaces."
+  },
+  {
+    "company": "ValleyWorks Advisory",
+    "address": "440 Birch Road, Plainside Valley, WA 98007",
+    "phone": "(206) 555-0147",
+    "website": "https://www.valleyworksadvisory.com",
+    "image": "valley-works.svg",
+    "membershipLevel": 3,
+    "category": "Finance & Consulting",
+    "description": "Business consultants helping local entrepreneurs with planning, marketing, and growth strategies."
+  }
+]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-labelledby="title desc">
+  <title id="title">Lakeside Lab</title>
+  <desc id="desc">Scientific services logo.</desc>
+  <rect width="300" height="180" rx="18" fill="#eff6fa"/>
+  <circle cx="78" cy="90" r="38" fill="#5d8db4"/>
+  <path d="M90 55c10 15 13 24 13 35 0 15-9 32-23 46 19 0 46-8 59-29 14-21 8-52-49-52Z" fill="#f4b942"/>
+  <path d="M152 50h106v18H152zm0 32h92v18h-92zm0 32h112v18H152z" fill="#2a4e69"/>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Plainside Valley Chamber logo</title>
+  <desc id="desc">A stylized mountain and sun icon.</desc>
+  <rect width="160" height="160" rx="24" fill="#123a4b"/>
+  <path d="M30 101L76 51l30 39 24-26 29 37H30Z" fill="#f4b942"/>
+  <path d="M68 92h24v20H68Z" fill="#edf7fb"/>
+  <circle cx="118" cy="42" r="12" fill="#edf7fb"/>
+</svg>

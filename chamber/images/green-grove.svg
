@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-labelledby="title desc">
+  <title id="title">Green Grove Studio</title>
+  <desc id="desc">Floral studio logo.</desc>
+  <rect width="300" height="180" rx="18" fill="#edf8f5"/>
+  <circle cx="75" cy="90" r="42" fill="#6bab7c"/>
+  <path d="M60 90c0-24 18-42 42-42-14 18-16 32-9 47 8 18 25 25 40 27-24 9-47 7-73-32Z" fill="#f4b942"/>
+  <path d="M150 60h100v18H150zm0 30h92v18h-92zm0 30h108v18H150z" fill="#1d5a49"/>
+</svg>

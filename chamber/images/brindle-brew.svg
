@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-labelledby="title desc">
+  <title id="title">Brindle Brew Co.</title>
+  <desc id="desc">Coffee shop logo.</desc>
+  <rect width="300" height="180" rx="18" fill="#f7f1ea"/>
+  <rect x="38" y="40" width="110" height="84" rx="26" fill="#47352c"/>
+  <path d="M60 62h68c8 0 14 6 14 14v12c0 23-17 40-40 40h-2c-24 0-42-17-42-40V76c0-8 6-14 14-14Z" fill="#d4a373"/>
+  <path d="M150 56h110v18H150zm0 28h86v18h-86zm0 30h104v18H150z" fill="#6a3f2c"/>
+</svg>
