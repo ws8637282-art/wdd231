@@ -1,0 +1,8 @@
+/* Normalize/reset styles: shared across Chamber project pages. */
+html { box-sizing: border-box; -webkit-text-size-adjust: 100%; }
+*, *::before, *::after { box-sizing: inherit; }
+body, h1, h2, h3, p, ul { margin: 0; }
+img, svg { display: block; max-width: 100%; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; }

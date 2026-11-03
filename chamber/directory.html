@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the Plainside Valley Chamber of Commerce directory and connect with local businesses, services, and professionals.">
+    <meta name="author" content="Whitney Carleen Snyder">
+    <meta name="theme-color" content="#183b34">
+    <title>Member Directory | Plainside Valley Chamber of Commerce</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Member Directory | Plainside Valley Chamber of Commerce">
+    <meta property="og:description" content="Meet the local businesses and professionals that make Plainside Valley thrive.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/ws8637282-art/wdd231/main/chamber/images/logo.svg">
+    <meta property="og:url" content="https://ws8637282-art.github.io/wdd231/chamber/directory.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-wrap">
+        <a href="index.html" class="brand" aria-label="Plainside Valley Chamber home">
+          <img src="images/logo.svg" alt="" class="logo" width="56" height="56">
+          <span class="brand-text"><span class="brand-name">Plainside Valley</span><span class="brand-tag">Chamber of Commerce</span></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul id="primary-nav" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content" class="page-shell">
+      <section class="page-banner" aria-labelledby="page-title">
+        <p class="eyebrow">Community Business Network</p>
+        <h1 id="page-title">Member Directory</h1>
+        <p>Discover the businesses, services, and people helping our valley grow and thrive.</p>
+      </section>
+      <section class="directory-section" aria-labelledby="directory-heading">
+        <div class="directory-heading-row">
+          <div><p class="eyebrow">Shop local. Grow together.</p><h2 id="directory-heading">Our local members</h2></div>
+          <div class="view-toggle" role="group" aria-label="Choose member display">
+            <button class="view-button active" data-view="grid" type="button" aria-pressed="true"><span aria-hidden="true">▦</span> Grid</button>
+            <button class="view-button" data-view="list" type="button" aria-pressed="false"><span aria-hidden="true">☰</span> List</button>
+          </div>
+        </div>
+        <p id="directory-status" class="visually-hidden" aria-live="polite"></p>
+        <div id="member-list" class="member-grid" aria-live="polite" aria-busy="true"></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-block"><h2>Visit the Chamber</h2><p>214 Orchard Avenue<br>Plainside Valley, WA 98001</p></div>
+      <div class="footer-block"><h2>Contact</h2><p><a href="tel:+12065550148">(206) 555-0148</a><br><a href="mailto:info@plainsidevalleychamber.org">info@plainsidevalleychamber.org</a></p></div>
+      <div class="footer-block footer-development"><h2>Site Development</h2><p>Whitney Carleen Snyder<br>WDD 231</p><p>&copy; <span id="currentYear"></span> Plainside Valley Chamber</p><p id="lastModified">Last modified: <span></span></p></div>
+    </footer>
+  </body>
+</html>
