@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-labelledby="title desc">
-  <title id="title">Summit Supply Co.</title>
-  <desc id="desc">Hardware store logo.</desc>
-  <rect width="300" height="180" rx="18" fill="#edf4f7"/>
-  <path d="M55 104V52h52v52H55Zm18-18h18v-18H73zm0 18h18v18H73zm18-18h18v-18H91zm0 18h18v18H91Z" fill="#2b6777"/>
-  <path d="M150 54h100v18H150zm0 30h110v18H150zm0 30h94v18h-94z" fill="#d18b31"/>
-</svg>
