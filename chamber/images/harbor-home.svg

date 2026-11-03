@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-labelledby="title desc">
-  <title id="title">Harbor Home Interiors</title>
-  <desc id="desc">Home goods logo.</desc>
-  <rect width="300" height="180" rx="18" fill="#f3f6f1"/>
-  <rect x="48" y="54" width="74" height="64" rx="10" fill="#c9a96d"/>
-  <path d="M38 118h97l-16 26H54z" fill="#7c8d77"/>
-  <path d="M150 56h98v18h-98zm0 30h124v18H150zm0 30h88v18h-88z" fill="#2e4e4a"/>
-</svg>
