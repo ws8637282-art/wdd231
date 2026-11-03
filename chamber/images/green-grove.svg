@@ -1,1 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120"><rect width="440" height="120" rx="18" fill="#e6efe7"/><circle cx="62" cy="60" r="43" fill="#426b53"/><path d="M62 88V52m0 16C38 69 36 49 37 39c19 1 28 11 25 29Zm0-10c2-20 15-28 31-27 0 20-11 30-31 31Z" fill="#f6f1dc"/><text x="125" y="57" fill="#183b34" font-family="Georgia,serif" font-size="30" font-weight="700">Green Grove</text><text x="127" y="84" fill="#59665f" font-family="Arial,sans-serif" font-size="17">STUDIO · ART & DESIGN</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Green Grove</title>
+  <desc id="desc">Abstract green landscape logo with layered mountains and a circular hill.</desc>
+  <rect width="800" height="600" fill="#efefef"/>
+
+  <g transform="translate(0,0)">
+    <!-- Large circular hill / leaf-like background -->
+    <path d="M 390 120
+             A 220 220 0 0 1 620 470
+             L 620 600
+             L 200 600
+             L 200 470
+             A 220 220 0 0 1 390 120 Z"
+          fill="#8bcf4a"/>
+
+    <!-- Front / lower mountain -->
+    <polygon points="200,600 335,335 470,600" fill="#6fbf53"/>
+
+    <!-- Center mountain -->
+    <polygon points="300,600 455,250 610,600" fill="#52a14d"/>
+
+    <!-- Rear mountain -->
+    <polygon points="395,600 565,175 735,600" fill="#3e8e44"/>
+  </g>
+</svg>
