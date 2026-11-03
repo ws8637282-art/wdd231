@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-labelledby="title desc">
-  <title id="title">Sunrise Valley Market</title>
-  <desc id="desc">Fresh produce and market logo.</desc>
-  <rect width="300" height="180" rx="18" fill="#f7f3ea"/>
-  <circle cx="70" cy="68" r="38" fill="#d85d2a"/>
-  <path d="M42 72c9-15 22-22 42-22 12 0 23 4 32 11-10 4-19 10-28 18-9 9-16 20-20 31-11-8-21-21-26-38Z" fill="#f4b942"/>
-  <path d="M146 58h115v19H146zm0 31h94v15h-94zm0 26h110v15H146z" fill="#2f6a5b"/>
-</svg>
