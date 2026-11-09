@@ -2,10 +2,115 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=directory.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to the Plainside Valley Chamber of Commerce.">
-    <title>Plainside Valley Chamber of Commerce</title>
+    <meta name="description" content="Connect with local businesses, discover community events, and grow with the Plainside Valley Chamber of Commerce.">
+    <meta name="author" content="Whitney Carleen Snyder">
+    <meta name="theme-color" content="#183b34">
+    <title>Home | Plainside Valley Chamber of Commerce</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Plainside Valley Chamber of Commerce">
+    <meta property="og:description" content="A strong community starts with local connections. Find events, meet local businesses, and join the chamber.">
+    <meta property="og:image" content="https://ws8637282-art.github.io/wdd231/chamber/images/logo.svg">
+    <meta property="og:image:alt" content="Plainside Valley Chamber of Commerce logo">
+    <meta property="og:url" content="https://ws8637282-art.github.io/wdd231/chamber/index.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/home.js" defer></script>
   </head>
-  <body><p>Welcome to the <a href="directory.html">Plainside Valley Chamber member directory</a>.</p></body>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-wrap">
+        <a href="index.html" class="brand" aria-label="Plainside Valley Chamber home">
+          <img src="images/logo.svg" alt="" class="logo" width="56" height="56">
+          <span class="brand-text"><span class="brand-name">Plainside Valley</span><span class="brand-tag">Chamber of Commerce</span></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul id="primary-nav" class="nav-list">
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content" class="page-shell home-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="images/valley-hero.svg" alt="A welcoming valley community surrounded by green hills and mountains" width="1600" height="700" fetchpriority="high">
+        <div class="hero-content">
+          <p class="eyebrow">A stronger valley, together</p>
+          <h1 id="hero-title">Local connections.<br>Lasting impact.</h1>
+          <p>Meet the people and businesses building a vibrant future for Plainside Valley.</p>
+          <a class="button button-primary" href="join.html">Become a member <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="home-section welcome-section" aria-labelledby="welcome-title">
+        <div>
+          <p class="eyebrow">Welcome to Plainside Valley</p>
+          <h2 id="welcome-title">Business grows better together.</h2>
+        </div>
+        <p>We connect neighbors, champion local businesses, and create opportunities for our community to thrive. Whether you are starting out or ready to grow, there is a place for you here.</p>
+      </section>
+
+      <div class="home-content-grid">
+        <section class="home-section events-section" aria-labelledby="events-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">Mark your calendar</p><h2 id="events-title">Upcoming events</h2></div>
+            <a class="text-link" href="discover.html">Explore the community <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="event-list">
+            <article class="event-card">
+              <div class="event-date"><span class="event-month">UPCOMING</span><time class="event-day" data-event-day="5">Friday</time></div>
+              <div><h3>Valley After Hours</h3><p>Meet local owners and make new connections over refreshments at the monthly chamber mixer.</p><p class="event-meta">5:30–7:00 p.m. <span aria-hidden="true">·</span> Plainside Valley Community Hall</p></div>
+            </article>
+            <article class="event-card">
+              <div class="event-date event-date-alt"><span class="event-month">UPCOMING</span><time class="event-day" data-event-day="2">Tuesday</time></div>
+              <div><h3>Small Business Growth Lab</h3><p>Bring your questions for a practical workshop on marketing, planning, and growing your business.</p><p class="event-meta">9:00–10:30 a.m. <span aria-hidden="true">·</span> Chamber meeting room</p></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="home-section weather-section" aria-labelledby="weather-title">
+          <div class="section-heading"><div><p class="eyebrow">Plan your day</p><h2 id="weather-title">Valley weather</h2></div></div>
+          <p class="weather-location">Plainside Valley, Washington</p>
+          <div id="current-weather" class="current-weather" aria-live="polite" aria-busy="true">
+            <p class="weather-message">Loading current conditions…</p>
+          </div>
+          <h3 class="forecast-heading">3-day forecast</h3>
+          <div id="weather-forecast" class="forecast-grid" aria-live="polite" aria-busy="true">
+            <p class="weather-message">Forecast will appear here.</p>
+          </div>
+          <p class="weather-credit">Weather data provided by OpenWeatherMap.</p>
+        </section>
+      </div>
+
+      <section class="home-section spotlight-section" aria-labelledby="spotlights-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">Meet our members</p><h2 id="spotlights-title">Business spotlights</h2></div>
+          <a class="text-link" href="directory.html">View the directory <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="spotlight-intro">Get to know a few of the outstanding businesses in our chamber community.</p>
+        <div id="spotlight-list" class="spotlight-grid" aria-live="polite" aria-busy="true">
+          <p class="member-empty">Loading local business spotlights…</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-block"><h2>Visit the Chamber</h2><p>214 Orchard Avenue<br>Plainside Valley, WA 98001</p></div>
+      <div class="footer-block"><h2>Contact</h2><p><a href="tel:+12065550148">(206) 555-0148</a><br><a href="mailto:info@plainsidevalleychamber.org">info@plainsidevalleychamber.org</a></p></div>
+      <div class="footer-block footer-development"><h2>Site Development</h2><p>Whitney Carleen Snyder<br>WDD 231</p><p>&copy; <span id="currentYear"></span> Plainside Valley Chamber</p><p id="lastModified">Last modified: <span></span></p></div>
+    </footer>
+  </body>
 </html>

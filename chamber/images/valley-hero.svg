@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Plainside Valley landscape</title>
+  <desc id="desc">A bright, welcoming valley framed by green hills and distant mountains.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#9bc8d0"/><stop offset="1" stop-color="#f5dca8"/></linearGradient>
+    <linearGradient id="hills" x2="0" y2="1"><stop stop-color="#72966e"/><stop offset="1" stop-color="#365d4d"/></linearGradient>
+    <linearGradient id="field" x2="0" y2="1"><stop stop-color="#a9bd7a"/><stop offset="1" stop-color="#647e51"/></linearGradient>
+  </defs>
+  <rect width="1600" height="700" fill="url(#sky)"/>
+  <circle cx="1270" cy="150" r="72" fill="#f7e3ae" opacity=".9"/>
+  <path d="M0 400 245 190l180 190 190-250 255 280 230-255 270 265 160-155 220 205v230H0Z" fill="#788f8a"/>
+  <path d="m300 314 125 66-125-160-76 85 76-20Zm315-71 165 167-255-280-117 153 207-40Zm484 37 121 126-230-255-108 120 217 9Z" fill="#e8ece3" opacity=".9"/>
+  <path d="M0 415q230-126 490-10t500-10q310-130 610 22v283H0Z" fill="url(#hills)"/>
+  <path d="M0 510q260-120 525-35t540-20q260-100 535 30v215H0Z" fill="url(#field)"/>
+  <path d="M0 640q240-108 520-34t540-30q270-85 540 18v106H0Z" fill="#496b48"/>
+  <path d="M615 700q170-108 315-104t280 104" fill="none" stroke="#e8d8a4" stroke-width="15" opacity=".9"/>
+  <g fill="#f6e5bb" opacity=".88"><rect x="1130" y="438" width="82" height="61" rx="3"/><path d="m1118 440 53-45 54 45Z"/><rect x="1225" y="455" width="62" height="45" rx="3"/><path d="m1217 456 39-35 40 35Z"/></g>
+  <g fill="#345a46"><path d="m148 510 36-105 36 105Z"/><path d="m196 518 44-130 44 130Z"/><path d="m1370 515 42-125 42 125Z"/><path d="m1428 520 34-103 34 103Z"/></g>
+</svg>
