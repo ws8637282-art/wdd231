@@ -1,0 +1,57 @@
+/* Membership application and confirmation pages */
+.join-layout { display: grid; gap: 2rem; padding: 0 0 3.5rem; }
+.application-section, .membership-aside { min-width: 0; }
+.application-section h2, .membership-aside h2, .confirmation-card h2 { margin: .25rem 0 .7rem; font-size: 1.75rem; }
+.form-intro, .levels-intro { margin: 0 0 1.2rem; color: var(--muted); }
+.join-form { display: grid; gap: 1rem; padding: 1.25rem; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); box-shadow: var(--shadow); }
+.join-form label { display: grid; gap: .35rem; color: var(--ink); font-size: .92rem; font-weight: 700; }
+.join-form label > span { color: #875b16; }
+.join-form input:not([type="hidden"]), .join-form select, .join-form textarea { width: 100%; min-height: 46px; padding: .7rem .75rem; border: 1px solid #87958d; border-radius: 6px; color: var(--ink); background: white; font: inherit; font-weight: 400; }
+.join-form textarea { min-height: 130px; resize: vertical; }
+.join-form input:focus-visible, .join-form select:focus-visible, .join-form textarea:focus-visible, .submit-button:focus-visible, .modal-link:focus-visible, .dialog-close:focus-visible, .confirmation-link:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.submit-button { min-height: 50px; padding: .75rem 1rem; border: 0; border-radius: 6px; color: white; background: var(--forest); font: inherit; font-weight: 700; cursor: pointer; }
+.submit-button:hover { background: var(--forest-deep); }
+.membership-cards { display: grid; gap: 1rem; }
+.level-card { --level-accent: var(--forest); position: relative; overflow: hidden; padding: 1.2rem; border: 1px solid var(--line); border-top: 4px solid var(--level-accent); border-radius: 10px; background: var(--paper); box-shadow: var(--shadow); opacity: 0; animation: card-arrive .65s ease-out forwards; }
+.level-card:nth-child(2) { animation-delay: .12s; }
+.level-card:nth-child(3) { animation-delay: .24s; }
+.level-card:nth-child(4) { animation-delay: .36s; }
+.level-np { --level-accent: #607d67; }
+.level-bronze { --level-accent: #9a5c2e; }
+.level-silver { --level-accent: #657887; }
+.level-gold { --level-accent: #a87919; }
+.level-price { margin: 0 0 .3rem; color: var(--level-accent); font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.level-card h3 { margin: 0 0 .5rem; font-size: 1.35rem; }
+.level-card > p:not(.level-price) { margin: 0 0 .9rem; color: var(--muted); font-size: .92rem; }
+.modal-link { display: inline-block; padding: .25rem 0; color: var(--forest); font-weight: 700; text-underline-offset: .2em; }
+.benefit-dialog { width: min(92vw, 520px); max-height: min(85vh, 680px); padding: 0; border: 0; border-radius: 12px; color: var(--ink); background: var(--paper); box-shadow: 0 20px 70px rgb(0 0 0 / 28%); }
+.benefit-dialog::backdrop { background: rgb(16 43 38 / 68%); }
+.dialog-content { position: relative; padding: 2rem; }
+.dialog-content h2 { max-width: 90%; margin: .3rem 0 .75rem; font-size: 1.8rem; }
+.dialog-content > p:not(.eyebrow) { color: var(--muted); }
+.dialog-content li { margin-block: .45rem; }
+.dialog-close { position: absolute; top: .8rem; right: .8rem; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; color: var(--forest); background: white; font-size: 1.7rem; line-height: 1; cursor: pointer; }
+.confirmation-card { max-width: 760px; margin: 0 auto 4rem; padding: clamp(1.25rem, 4vw, 2.5rem); border: 1px solid var(--line); border-radius: 12px; background: var(--paper); box-shadow: var(--shadow); }
+.application-summary { margin: 1.5rem 0; }
+.application-summary > div { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 1rem; padding: .8rem 0; border-bottom: 1px solid var(--line); }
+.application-summary dt { color: var(--muted); font-weight: 700; }
+.application-summary dd { margin: 0; overflow-wrap: anywhere; }
+.confirmation-link { display: inline-block; margin-top: .5rem; padding: .75rem 1rem; border-radius: 6px; color: white; font-weight: 700; text-decoration: none; }
+.confirmation-link:hover { color: white; background: var(--forest-deep); }
+@keyframes card-arrive { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 680px) {
+  .join-layout { grid-template-columns: minmax(0, 1.2fr) minmax(270px, .8fr); gap: 2rem; align-items: start; }
+  .join-form { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 1.5rem; }
+  .join-form label:nth-of-type(3), .join-form label:nth-of-type(6), .join-form label:nth-of-type(7), .join-form label:nth-of-type(8), .submit-button { grid-column: 1 / -1; }
+  .membership-cards { gap: .9rem; }
+  .level-card { padding: 1rem; }
+}
+@media (min-width: 980px) {
+  .join-layout { grid-template-columns: minmax(0, 1.3fr) minmax(330px, .7fr); gap: 3rem; padding-bottom: 4rem; }
+  .membership-cards { gap: 1rem; }
+  .level-card { padding: 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+  .level-card { opacity: 1; animation: none; }
+}

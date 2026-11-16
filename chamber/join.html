@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for membership with the Plainside Valley Chamber of Commerce and find the membership level that fits your organization.">
+    <meta name="author" content="Whitney Carleen Snyder">
+    <meta name="theme-color" content="#183b34">
+    <title>Join the Chamber | Plainside Valley Chamber of Commerce</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Join the Chamber | Plainside Valley Chamber of Commerce">
+    <meta property="og:description" content="Build connections and grow your organization with a Plainside Valley Chamber membership.">
+    <meta property="og:image" content="https://ws8637282-art.github.io/wdd231/chamber/images/logo.svg">
+    <meta property="og:image:alt" content="Plainside Valley Chamber of Commerce logo">
+    <meta property="og:url" content="https://ws8637282-art.github.io/wdd231/chamber/join.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-wrap">
+        <a href="index.html" class="brand" aria-label="Plainside Valley Chamber home">
+          <img src="images/logo.svg" alt="" class="logo" width="56" height="56">
+          <span class="brand-text"><span class="brand-name">Plainside Valley</span><span class="brand-tag">Chamber of Commerce</span></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul id="primary-nav" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content" class="page-shell">
+      <section class="page-banner" aria-labelledby="page-title">
+        <p class="eyebrow">Make a local connection</p>
+        <h1 id="page-title">Join the Chamber</h1>
+        <p>Become part of a community that helps Plainside Valley businesses connect, learn, and thrive.</p>
+      </section>
+
+      <div class="join-layout">
+        <section class="application-section" aria-labelledby="application-heading">
+          <p class="eyebrow">Membership application</p>
+          <h2 id="application-heading">Tell us about yourself</h2>
+          <p class="form-intro">Fields marked required must be completed. Choose a membership level to get started.</p>
+          <form class="join-form" method="get" action="thankyou.html">
+            <label for="first-name">First name <span aria-hidden="true">*</span>
+              <input id="first-name" name="firstName" type="text" title="Enter your first name." autocomplete="given-name" required>
+            </label>
+            <label for="last-name">Last name <span aria-hidden="true">*</span>
+              <input id="last-name" name="lastName" type="text" title="Enter your last name." autocomplete="family-name" required>
+            </label>
+            <label for="organization-title">Title within your organization
+              <input id="organization-title" name="organizationTitle" type="text" title="Use at least seven letters, spaces, or hyphens." autocomplete="organization-title" pattern="[A-Za-z\\s-]{7,}" minlength="7">
+            </label>
+            <label for="email">Email address <span aria-hidden="true">*</span>
+              <input id="email" name="email" type="email" title="Enter a valid email address." autocomplete="email" placeholder="you@example.com" required>
+            </label>
+            <label for="phone">Mobile phone number <span aria-hidden="true">*</span>
+              <input id="phone" name="phone" type="tel" title="Enter your mobile phone number." autocomplete="tel" required>
+            </label>
+            <label for="organization">Business or organization name <span aria-hidden="true">*</span>
+              <input id="organization" name="organization" type="text" title="Enter your business or organization name." autocomplete="organization" required>
+            </label>
+            <label for="membership">Membership level <span aria-hidden="true">*</span>
+              <select id="membership" name="membership" title="Choose a chamber membership level." required>
+                <option value="" selected disabled>Select a membership level</option>
+                <option value="np">NP Membership — No fee</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+              </select>
+            </label>
+            <label for="description">Business or organization description
+              <textarea id="description" name="description" title="Briefly describe your business or organization." rows="5"></textarea>
+            </label>
+            <input id="form-loaded" name="timestamp" type="hidden" value="">
+            <input class="submit-button" type="submit" value="Send Membership Application">
+          </form>
+        </section>
+
+        <aside class="membership-aside" aria-labelledby="levels-heading">
+          <p class="eyebrow">Find your fit</p>
+          <h2 id="levels-heading">Membership levels</h2>
+          <p class="levels-intro">Explore the benefits included with each level.</p>
+          <div class="membership-cards">
+            <article class="level-card level-np">
+              <p class="level-price">Free</p><h3>NP Membership</h3>
+              <p>For nonprofit organizations serving our community.</p>
+              <a href="#np-details" class="modal-link" data-dialog="np-details">View NP benefits <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="level-card level-bronze">
+              <p class="level-price">$120 / year</p><h3>Bronze Membership</h3>
+              <p>Build your network and establish your presence.</p>
+              <a href="#bronze-details" class="modal-link" data-dialog="bronze-details">View Bronze benefits <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="level-card level-silver">
+              <p class="level-price">$240 / year</p><h3>Silver Membership</h3>
+              <p>Grow your reach with added visibility and savings.</p>
+              <a href="#silver-details" class="modal-link" data-dialog="silver-details">View Silver benefits <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="level-card level-gold">
+              <p class="level-price">$450 / year</p><h3>Gold Membership</h3>
+              <p>Make the most of premium promotion and access.</p>
+              <a href="#gold-details" class="modal-link" data-dialog="gold-details">View Gold benefits <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </aside>
+      </div>
+
+      <dialog class="benefit-dialog" id="np-details" aria-labelledby="np-title">
+        <div class="dialog-content"><button class="dialog-close" type="button" aria-label="Close NP membership benefits">&times;</button><p class="eyebrow">No annual fee</p><h2 id="np-title">NP Membership Benefits</h2><p>Designed for nonprofit organizations advancing the Plainside Valley community.</p><ul><li>Chamber directory listing</li><li>Access to nonprofit networking meetups</li><li>Community resource and training announcements</li><li>Invitations to selected member events</li></ul></div>
+      </dialog>
+      <dialog class="benefit-dialog" id="bronze-details" aria-labelledby="bronze-title">
+        <div class="dialog-content"><button class="dialog-close" type="button" aria-label="Close Bronze membership benefits">&times;</button><p class="eyebrow">$120 per year</p><h2 id="bronze-title">Bronze Membership Benefits</h2><p>A practical starting point for local businesses ready to make new connections.</p><ul><li>All NP-level directory and event benefits</li><li>Member business directory listing with website link</li><li>Discounted admission to chamber events</li><li>Quarterly small-business training sessions</li></ul></div>
+      </dialog>
+      <dialog class="benefit-dialog" id="silver-details" aria-labelledby="silver-title">
+        <div class="dialog-content"><button class="dialog-close" type="button" aria-label="Close Silver membership benefits">&times;</button><p class="eyebrow">$240 per year</p><h2 id="silver-title">Silver Membership Benefits</h2><p>More ways to promote your organization and build your skills.</p><ul><li>All Bronze-level benefits</li><li>One featured member social post each year</li><li>Two complimentary event admissions per year</li><li>Enhanced directory listing and event discounts</li></ul></div>
+      </dialog>
+      <dialog class="benefit-dialog" id="gold-details" aria-labelledby="gold-title">
+        <div class="dialog-content"><button class="dialog-close" type="button" aria-label="Close Gold membership benefits">&times;</button><p class="eyebrow">$450 per year</p><h2 id="gold-title">Gold Membership Benefits</h2><p>Premium visibility and access for organizations ready to lead.</p><ul><li>All Silver-level benefits</li><li>Rotating spotlight placement on the chamber home page</li><li>Priority sponsorship opportunities at chamber events</li><li>Four complimentary event admissions per year</li><li>One annual promotional workshop consultation</li></ul></div>
+      </dialog>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-block"><h2>Visit the Chamber</h2><p>214 Orchard Avenue<br>Plainside Valley, WA 98001</p></div>
+      <div class="footer-block"><h2>Contact</h2><p><a href="tel:+12065550148">(206) 555-0148</a><br><a href="mailto:info@plainsidevalleychamber.org">info@plainsidevalleychamber.org</a></p></div>
+      <div class="footer-block footer-development"><h2>Site Development</h2><p>Whitney Carleen Snyder<br>WDD 231</p><p>&copy; <span id="currentYear"></span> Plainside Valley Chamber</p><p id="lastModified">Last modified: <span></span></p></div>
+    </footer>
+  </body>
+</html>
