@@ -1,5 +1,7 @@
 
-/* Home Page Styles */
+/* ==============================
+   CHAMBER HOME PAGE
+   ============================== */
 
 .home-hero {
     position: relative;
@@ -153,17 +155,6 @@
     .events-grid,
     .weather-grid,
     .spotlight-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (min-width: 900px) {
-    .events-grid,
-    .spotlight-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .weather-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
