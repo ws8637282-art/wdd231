@@ -1,0 +1,72 @@
+
+const spotlightContainer = document.querySelector("#spotlight-container");
+
+async function getSpotlights() {
+    try {
+        const response = await fetch("data/members.json");
+
+        if (!response.ok) {
+            throw new Error("Could not load member information.");
+        }
+
+        const members = await response.json();
+
+        const eligibleMembers = members.filter(member =>
+            member.membership === 2 || member.membership === 3
+        );
+
+        const shuffledMembers = eligibleMembers.sort(
+            () => Math.random() - 0.5
+        );
+
+        const selectedMembers = shuffledMembers.slice(0, 3);
+
+        displaySpotlights(selectedMembers);
+
+    } catch (error) {
+        spotlightContainer.innerHTML =
+            "<p>Member spotlights are currently unavailable.</p>";
+
+        console.error("Spotlight error:", error);
+    }
+}
+
+function displaySpotlights(members) {
+    if (members.length === 0) {
+        spotlightContainer.innerHTML =
+            "<p>No Gold or Silver members are available.</p>";
+        return;
+    }
+
+    spotlightContainer.innerHTML = members.map(member => {
+        const membership = member.membership === 3 ? "Gold" : "Silver";
+
+        return `
+            <article class="spotlight-card">
+                <img src="${member.image}"
+                     alt="${member.name} logo"
+                     loading="lazy"
+                     width="150"
+                     height="100">
+
+                <h3>${member.name}</h3>
+
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+
+                <p>
+                    <a href="${member.website}" target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Website
+                    </a>
+                </p>
+
+                <p class="membership-level">
+                    ${membership} Member
+                </p>
+            </article>
+        `;
+    }).join("");
+}
+
+getSpotlights();
