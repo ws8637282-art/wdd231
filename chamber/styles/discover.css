@@ -1,43 +1,32 @@
-:root { --discover-gap: 1.15rem; }
-.discover-shell { padding-bottom: 3rem; }
-.discover-shell .page-banner { padding-inline: 0; }
-.visit-message { margin: 0 auto 2rem; padding: 1rem 1.2rem; border-left: 5px solid var(--gold); border-radius: 0 8px 8px 0; color: var(--forest-deep); background: var(--sage); font-weight: 700; }
-.discover-section { padding-bottom: 1rem; }
-.discover-intro { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1.25rem; }
-.discover-intro h2 { margin: .25rem 0 0; font-size: 1.8rem; }
-.discover-intro > p { max-width: 620px; color: var(--muted); }
-.discover-grid { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "museum" "park" "nature" "trail" "race" "garden" "campus" "river"; gap: var(--discover-gap); align-items: stretch; }
-.discover-card { grid-area: var(--card-area); min-width: 0; padding: 1rem; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); box-shadow: var(--shadow); }
-.discover-card h2 { min-height: 2.4em; margin: 0 0 .75rem; font-size: 1.3rem; }
-.discover-card figure { margin: 0 0 .85rem; overflow: hidden; border-radius: 8px; background: var(--sage); }
-.discover-card img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-.discover-card address { margin-bottom: .65rem; color: var(--forest); font-size: .9rem; font-style: normal; font-weight: 700; }
-.discover-card > p { color: var(--muted); font-size: .93rem; }
-.discover-card .discover-detail { margin-top: -.25rem; padding: .7rem; border-left: 3px solid var(--gold); background: #f7f5ef; }
-.learn-more { min-height: 44px; padding: .6rem 1rem; border: 0; border-radius: 6px; color: white; background: var(--forest); font: inherit; font-weight: 700; cursor: pointer; }
-.learn-more:hover { background: var(--forest-deep); }
-.learn-more:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
-@media (min-width: 641px) {
-  .discover-intro { flex-direction: row; align-items: end; justify-content: space-between; gap: 2rem; }
-  .discover-intro > p { margin-bottom: 0; }
-  .discover-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: "museum museum" "museum museum" "park nature" "trail race" "garden campus" "river river"; }
-  .discover-card { padding: 1.15rem; }
-  .discover-card h2 { min-height: 0; }
-  .discover-card[style*="--card-area: museum"], .discover-card[style*="--card-area: river"] { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: .5rem 1rem; align-items: start; }
-  .discover-card[style*="--card-area: museum"] h2, .discover-card[style*="--card-area: river"] h2 { grid-column: 1 / -1; }
-  .discover-card[style*="--card-area: museum"] figure, .discover-card[style*="--card-area: river"] figure { grid-row: span 3; }
-}
-@media (min-width: 1025px) {
-  .discover-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-areas: "museum museum park nature" "museum museum trail race" "garden campus river river" "garden campus river river"; }
-  .discover-card { padding: 1.2rem; }
-  .discover-card[style*="--card-area: museum"], .discover-card[style*="--card-area: river"] { display: block; }
-  .discover-card[style*="--card-area: museum"] h2, .discover-card[style*="--card-area: river"] h2 { min-height: 2.4em; }
-  .discover-card[style*="--card-area: museum"] figure, .discover-card[style*="--card-area: river"] figure { margin-bottom: .85rem; }
-}
-@media (hover: hover) and (min-width: 641px) and (prefers-reduced-motion: no-preference) {
-  .discover-card img { transition: filter .2s ease, transform .2s ease; }
-  .discover-card:hover img { filter: saturate(1.12) contrast(1.04); transform: scale(1.035); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .discover-card img { transition: none; }
+
+/* ==============================
+   LARGE SCREEN HOME PAGE
+   ============================== */
+
+@media screen and (min-width: 900px) {
+
+    .events-grid,
+    .spotlight-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .weather-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-hero {
+        min-height: 520px;
+    }
+
+    .home-hero > img {
+        height: 520px;
+    }
+
+    .hero-content {
+        padding: 4rem;
+    }
+
+    .home-section {
+        margin: 4rem 0;
+    }
 }
