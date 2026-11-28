@@ -1,32 +1,134 @@
+#visit-message {
+    background: #f4f4f4;
+    padding: 1rem;
+    margin: 1rem;
+    border-left: 5px solid #0b5ed7;
+    font-weight: 600;
+}
 
-/* ==============================
-   LARGE SCREEN HOME PAGE
-   ============================== */
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
 
-@media screen and (min-width: 900px) {
+/* Card Styling */
 
-    .events-grid,
-    .spotlight-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    padding: 1rem;
+}
 
-    .weather-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-    .home-hero {
-        min-height: 520px;
-    }
+.card address {
+    font-style: normal;
+    font-weight: bold;
+    margin: .5rem 0;
+}
 
-    .home-hero > img {
-        height: 520px;
-    }
+.card button {
+    background: #0b5ed7;
+    color: white;
+    border: none;
+    padding: .75rem;
+    cursor: pointer;
+}
 
-    .hero-content {
-        padding: 4rem;
-    }
+/* =======================
+   SMALL
+======================= */
 
-    .home-section {
-        margin: 4rem 0;
-    }
+@media (max-width: 640px) {
+
+.discover-grid {
+    grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six"
+        "seven"
+        "eight";
+}
+
+.card:nth-child(1) { grid-area: one; }
+.card:nth-child(2) { grid-area: two; }
+.card:nth-child(3) { grid-area: three; }
+.card:nth-child(4) { grid-area: four; }
+.card:nth-child(5) { grid-area: five; }
+.card:nth-child(6) { grid-area: six; }
+.card:nth-child(7) { grid-area: seven; }
+.card:nth-child(8) { grid-area: eight; }
+
+}
+
+/* =======================
+   MEDIUM
+======================= */
+
+@media (min-width: 641px) {
+
+.discover-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-areas:
+        "one one"
+        "two three"
+        "four five"
+        "six seven"
+        "eight eight";
+}
+
+.card:nth-child(1) { grid-area: one; }
+.card:nth-child(2) { grid-area: two; }
+.card:nth-child(3) { grid-area: three; }
+.card:nth-child(4) { grid-area: four; }
+.card:nth-child(5) { grid-area: five; }
+.card:nth-child(6) { grid-area: six; }
+.card:nth-child(7) { grid-area: seven; }
+.card:nth-child(8) { grid-area: eight; }
+
+}
+
+/* =======================
+   LARGE
+======================= */
+
+@media (min-width: 1025px) {
+
+.discover-grid {
+
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-areas:
+        "one one two three"
+        "four five two six"
+        "seven eight eight six";
+}
+
+.card:nth-child(1) { grid-area: one; }
+.card:nth-child(2) { grid-area: two; }
+.card:nth-child(3) { grid-area: three; }
+.card:nth-child(4) { grid-area: four; }
+.card:nth-child(5) { grid-area: five; }
+.card:nth-child(6) { grid-area: six; }
+.card:nth-child(7) { grid-area: seven; }
+.card:nth-child(8) { grid-area: eight; }
+
+.card img:hover {
+
+    transform: scale(1.05);
+    filter: brightness(110%);
+    transition: 0.3s ease;
+}
 }
