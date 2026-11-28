@@ -1,7 +1,7 @@
 
 const API_KEY = "YOUR_API_KEY";
 
-// Plainside Valley, Washington (approximate coordinates)
+// Approximate Plainside Valley, Washington coordinates
 const LAT = 47.5;
 const LON = -121.9;
 
@@ -22,7 +22,7 @@ async function getWeather() {
         ]);
 
         if (!currentResponse.ok || !forecastResponse.ok) {
-            throw new Error("Weather information could not be loaded.");
+            throw new Error("Unable to retrieve weather information.");
         }
 
         const currentData = await currentResponse.json();
@@ -32,9 +32,13 @@ async function getWeather() {
         displayForecast(forecastData);
 
     } catch (error) {
-        currentWeather.innerHTML = "<p>Weather information is currently unavailable.</p>";
-        weatherForecast.innerHTML = "<p>Forecast is currently unavailable.</p>";
-        console.error("Weather error:", error);
+        currentWeather.innerHTML =
+            "<p>Current weather is unavailable.</p>";
+
+        weatherForecast.innerHTML =
+            "<p>Weather forecast is unavailable.</p>";
+
+        console.error(error);
     }
 }
 
@@ -45,10 +49,17 @@ function displayCurrentWeather(data) {
     const humidity = data.main.humidity;
 
     currentWeather.innerHTML = `
-        <img src="https://openweathermap.org/img/wn/${icon}@2x.png"
-             alt="${description}" width="80" height="80">
+        <img
+            src="https://openweathermap.org/img/wn/${icon}@2x.png"
+            alt="${description}"
+            width="80"
+            height="80"
+        >
+
         <p class="temperature">${temperature}&deg;F</p>
+
         <p>${description}</p>
+
         <p>Humidity: ${humidity}%</p>
     `;
 }
@@ -75,24 +86,35 @@ function displayForecast(data) {
     const nextThreeDays = Object.entries(dailyForecasts).slice(1, 4);
 
     weatherForecast.innerHTML = nextThreeDays.map(([date, info]) => {
-        const averageTemp = Math.round(
+        const averageTemperature = Math.round(
             info.temperatures.reduce((sum, temp) => sum + temp, 0) /
             info.temperatures.length
         );
 
         const dayName = new Date(`${date}T12:00:00`)
-            .toLocaleDateString("en-US", { weekday: "long" });
+            .toLocaleDateString("en-US", {
+                weekday: "long"
+            });
 
         const description = info.descriptions[0];
         const icon = info.icons[0];
 
         return `
             <div class="forecast-day">
+
                 <h4>${dayName}</h4>
-                <img src="https://openweathermap.org/img/wn/${icon}.png"
-                     alt="${description}" width="50" height="50">
-                <p>${averageTemp}&deg;F average</p>
+
+                <img
+                    src="https://openweathermap.org/img/wn/${icon}.png"
+                    alt="${description}"
+                    width="50"
+                    height="50"
+                >
+
+                <p>${averageTemperature}&deg;F average</p>
+
                 <p>${description}</p>
+
             </div>
         `;
     }).join("");
