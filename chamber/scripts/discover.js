@@ -1,60 +1,67 @@
-import { attractions } from "../data/attractions.mjs";
+import { attractions } from "../data/discover.mjs";
 
 const grid = document.querySelector("#discover-grid");
 
-function renderAttractions() {
-  if (!grid) return;
+attractions.forEach(item => {
 
-  grid.innerHTML = attractions.map((place) => `
-    <article class="discover-card" style="--card-area: ${place.id}">
-      <h2>${place.name}</h2>
-      <figure>
-        <img src="${place.image}" alt="${place.alt}" width="300" height="200" loading="lazy">
-      </figure>
-      <address>${place.address}</address>
-      <p>${place.description}</p>
-      <p class="discover-detail" id="detail-${place.id}" hidden>${place.detail}</p>
-      <button class="learn-more" type="button" aria-expanded="false" aria-controls="detail-${place.id}">Learn more</button>
-    </article>
-  `).join("");
+    const card = document.createElement("section");
+    card.classList.add("card");
 
-  grid.addEventListener("click", (event) => {
-    const button = event.target.closest(".learn-more");
-    if (!button) return;
-    const detail = document.getElementById(button.getAttribute("aria-controls"));
-    const isExpanded = button.getAttribute("aria-expanded") === "true";
-    button.setAttribute("aria-expanded", String(!isExpanded));
-    button.textContent = isExpanded ? "Learn more" : "Show less";
-    detail.hidden = isExpanded;
-  });
-}
+    card.innerHTML = `
+        <h2>${item.name}</h2>
 
-function showVisitMessage() {
-  const message = document.querySelector("#visit-message");
-  if (!message) return;
+        <figure>
+            <img src="${item.image}"
+                 alt="${item.name}"
+                 loading="lazy"
+                 width="300"
+                 height="200">
+        </figure>
 
-  const storageKey = "plainsideDiscoverLastVisit";
-  const now = Date.now();
-  let previousVisit;
+        <address>${item.address}</address>
 
-  try {
-    previousVisit = Number(localStorage.getItem(storageKey));
-    if (!previousVisit || !Number.isFinite(previousVisit)) {
-      message.textContent = "Welcome! Let us know if you have any questions.";
+        <p>${item.description}</p>
+
+        <button>Learn More</button>
+    `;
+
+    grid.appendChild(card);
+});
+
+/* Visit Message */
+
+const message = document.querySelector("#visit-message");
+
+const today = Date.now();
+const lastVisit = localStorage.getItem("lastVisit");
+
+if (!lastVisit) {
+
+    message.textContent =
+        "Welcome! Let us know if you have any questions.";
+
+} else {
+
+    const difference = today - Number(lastVisit);
+
+    const daysBetween =
+        Math.floor(difference / 86400000);
+
+    if (daysBetween < 1) {
+
+        message.textContent =
+            "Back so soon! Awesome!";
+
+    } else if (daysBetween === 1) {
+
+        message.textContent =
+            "You last visited 1 day ago.";
+
     } else {
-      const elapsed = now - previousVisit;
-      if (elapsed < 24 * 60 * 60 * 1000) {
-        message.textContent = "Back so soon! Awesome!";
-      } else {
-        const days = Math.floor(elapsed / (24 * 60 * 60 * 1000));
-        message.textContent = `You last visited ${days} ${days === 1 ? "day" : "days"} ago.`;
-      }
+
+        message.textContent =
+            `You last visited ${daysBetween} days ago.`;
     }
-    localStorage.setItem(storageKey, String(now));
-  } catch {
-    message.textContent = "Welcome! Let us know if you have any questions.";
-  }
 }
 
-renderAttractions();
-showVisitMessage();
+localStorage.setItem("lastVisit", today);
