@@ -1,0 +1,61 @@
+
+/* LARGE SCREEN DESIGN */
+
+@media screen and (min-width: 700px) {
+
+    .header-container {
+        max-width: 1100px;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        background: transparent;
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 12px 20px;
+        border-radius: 5px;
+    }
+
+    main {
+        margin-top: 35px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1.6fr 1fr;
+    }
+
+    .about,
+    .photo {
+        min-height: 270px;
+    }
+
+    .filters {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-content {
+        padding: 25px;
+    }
+
+    .certificate-content {
+        padding: 25px;
+    }
+}
