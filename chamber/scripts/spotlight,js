@@ -6,16 +6,17 @@ async function getSpotlights() {
         const response = await fetch("data/members.json");
 
         if (!response.ok) {
-            throw new Error("Could not load member information.");
+            throw new Error("Unable to load member data.");
         }
 
         const members = await response.json();
 
         const eligibleMembers = members.filter(member =>
-            member.membership === 2 || member.membership === 3
+            Number(member.membership) === 2 ||
+            Number(member.membership) === 3
         );
 
-        const shuffledMembers = eligibleMembers.sort(
+        const shuffledMembers = [...eligibleMembers].sort(
             () => Math.random() - 0.5
         );
 
@@ -28,6 +29,9 @@ async function getSpotlights() {
             "<p>Member spotlights are currently unavailable.</p>";
 
         console.error("Spotlight error:", error);
+
+    } finally {
+        spotlightContainer.setAttribute("aria-busy", "false");
     }
 }
 
@@ -39,24 +43,32 @@ function displaySpotlights(members) {
     }
 
     spotlightContainer.innerHTML = members.map(member => {
-        const membership = member.membership === 3 ? "Gold" : "Silver";
+        const membership =
+            Number(member.membership) === 3 ? "Gold" : "Silver";
 
         return `
             <article class="spotlight-card">
-                <img src="${member.image}"
-                     alt="${member.name} logo"
-                     loading="lazy"
-                     width="150"
-                     height="100">
+
+                <img
+                    src="${member.image}"
+                    alt="${member.name} logo"
+                    loading="lazy"
+                    width="150"
+                    height="100"
+                >
 
                 <h3>${member.name}</h3>
 
                 <p>${member.address}</p>
+
                 <p>${member.phone}</p>
 
                 <p>
-                    <a href="${member.website}" target="_blank"
-                       rel="noopener noreferrer">
+                    <a
+                        href="${member.website}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Visit Website
                     </a>
                 </p>
@@ -64,6 +76,7 @@ function displaySpotlights(members) {
                 <p class="membership-level">
                     ${membership} Member
                 </p>
+
             </article>
         `;
     }).join("");
